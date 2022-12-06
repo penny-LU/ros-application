@@ -14,10 +14,25 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@mdi/font": "^7.0.96",
+    "axios": "^0.27.2",
+    "crypto-js": "^4.1.1",
+    "element": "^0.1.4",
+    "element-ui": "^2.15.9",
+    "js-base64": "^3.7.3",
+    "js-cookie": "^3.0.1",
+    "request-ip": "^3.3.0",
+    "socket.io": "^2.3.0",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-scroll-fixed-navbar": "^0.2.2",
+    "vuetify": "^2.6.6",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0",
+    "xterm": "^3.12.0"
   },
   "devDependencies": {
+    "@mdi/js": "^7.0.96",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
