@@ -76,15 +76,24 @@ app.get('/download', async (req, res) => {
 })
 
 app.post('/download', async (req, res) => {
-  console.log('=========')
+  // try {
+  //   console.log('///////receive error')
+  //   res.send('///////receive error')
+  // } catch (err) {
+  //   res.send({ error: 'receive error' })
+  // }
   try {
     const msg = req.body.string // msg是前端傳給後端的下載指令
-    const client = req.body.client // msg是前端傳給後端的device 訊息
+    const reqclient = req.body.client // msg是前端傳給後端的device 訊息
     socketList.forEach(function (clients) {
-      const eclient = `${clients.remoteAddress}\u00A0${clients.remotePort}`
-      if (eclient === client) {
+      const eclient = `${clients.remoteAddress}${clients.remotePort}`
+      console.log(JSON.stringify(eclient))
+      console.log(JSON.stringify(reqclient))
+      console.log(eclient.replace(/ /g, '') === reqclient.replace(/ /g, ''))
+      if (eclient.replace(/ /g, '') === reqclient.replace(/ /g, '')) {
         // 可以通?端口???分是??的?
-        clients.write(`${msg}\u00A0${client}`)
+        console.log('*******')
+        clients.write(`${msg}\u00A0${reqclient}`)
       } else {
         res.status(400).send('無此設備')
       }

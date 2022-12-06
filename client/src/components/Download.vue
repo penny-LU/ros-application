@@ -3,7 +3,7 @@
     style="position: relative" justify='center' >
       <v-row
       justify="center">
-      <v-column >
+      <v-col >
         <v-card  flat>
         <input type="checkbox"
           :value="0"
@@ -69,13 +69,13 @@
           type="text"
           v-model="camera_path"
         ></v-text-field>
-      </v-card>        
-      </v-column>
-      <v-column>
-        <div> Clients List:</div>       
+      </v-card>
+      </v-col>
+      <v-col>
+        <div> Clients List:</div>
         <div v-for="client in clients" :key="client.sockAddress" >HOST: {{client.sockAddress}} PORT: {{client.sockPort
-        }}</div>        
-      </v-column>
+        }}</div>
+      </v-col>
     </v-row>
     <v-row
     justify="center"
@@ -139,16 +139,6 @@ export default {
     await this.data()
   },
   methods: {
-    async data () {
-      try {
-        await DownloadService.getClient().then((response) => {
-          this.clients = response.data
-          console.log(this.clients)
-        })
-      } catch (err) {
-        console.log(err)
-      }
-    },
     async send () {
       if (this.image === false || this.image === '0') {
         this.image = '0'
@@ -170,17 +160,17 @@ export default {
       } catch (err) {
         console.log(err)
       }
-    }
-    // setCorrect (e) {
-    //   this.$emit('set-correct',
-    //   e
-    //   )
-    // },
-    // setOptionText (text) {
-    //   this.$emit('set-option-text', {
-    //     optionText: text
-    //   })
-    // }
+    },
+    async data () {
+      try {
+        await DownloadService.getClient().then((response) => {
+          this.clients = response.data
+          console.log(this.clients)
+        })
+      } catch (err) {
+        console.log(err)
+      }
+    },
   }
   // components: {
   //   Menu
