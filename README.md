@@ -41,7 +41,7 @@
 4. 在該目錄下，執行 "npm start"
 
 # 前端畫面
-![image](https://github.com/penny-LU/ros-application/blob/main/download_page.jpg)
+![image](https://github.com/penny-LU/ros-application/blob/main/7ACFA4ED-9361-4FCD-9860-4751E60ABAE3.jpeg)
 
 # Reference
 1. Node.js official documentation: https://nodejs.org/en/docs/
