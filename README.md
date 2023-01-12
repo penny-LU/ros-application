@@ -21,6 +21,7 @@
 
 **使用步驟**
 * 執行時請勿關閉CMD
+* 請先CMD上執行 git clone https://github.com/penny-LU/ros-application.git
 
 **啟動前端的步驟**
 1. 開啟CMD （命令提示字元）
