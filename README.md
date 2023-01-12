@@ -1,8 +1,9 @@
-# Vue.js(前端) + Node.js(後端)
+# Vue.js(前端) + Node.js(後端) + Express.js(後端框架)
 本範例教學為在實體機上，在內部區域網環境下，分別使用
 
-* 以 Vue.js V2.9.6 運作的前端
-* 以 Node.js v16.15.0 運作的後端 
+* Vue.js V2.9.6
+* Node.js v16.15.0
+* E
 
 **事前設置**
 
